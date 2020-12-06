@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CurrenciesViewController" customModule="PPEx" customModuleProvider="target">
+            <connections>
+                <outlet property="currenciesCollectionView" destination="Zkt-ar-y7b" id="Xgv-0y-SwB"/>
+                <outlet property="currencyDropDownView" destination="aJi-hA-oli" id="78F-PW-lE6"/>
+                <outlet property="currencyEntryView" destination="bH6-o4-G6u" id="wIm-N3-RO1"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bH6-o4-G6u" customClass="CurrencyEntryView" customModule="PPEx" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="60" width="414" height="64"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="vQI-W6-3ey"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aJi-hA-oli" customClass="CurrencyDropDownView" customModule="PPEx" customModuleProvider="target">
+                    <rect key="frame" x="207" y="132" width="207" height="64"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="5UJ-Sp-qUP"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Zkt-ar-y7b">
+                    <rect key="frame" x="0.0" y="196" width="414" height="666"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IHY-1n-9MB">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottomMargin" secondItem="Zkt-ar-y7b" secondAttribute="bottom" id="0AX-9I-Rlg"/>
+                <constraint firstItem="bH6-o4-G6u" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="7xy-Dx-eb4"/>
+                <constraint firstItem="bH6-o4-G6u" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="8Vi-DF-RU2"/>
+                <constraint firstItem="bH6-o4-G6u" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="9y7-V7-UnU"/>
+                <constraint firstItem="Zkt-ar-y7b" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="CGR-oh-dgx"/>
+                <constraint firstAttribute="trailing" secondItem="aJi-hA-oli" secondAttribute="trailing" id="KSh-d4-JVX"/>
+                <constraint firstItem="Zkt-ar-y7b" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="NZm-eo-cRa"/>
+                <constraint firstItem="Zkt-ar-y7b" firstAttribute="top" secondItem="aJi-hA-oli" secondAttribute="bottom" id="RHR-nk-psJ"/>
+                <constraint firstItem="aJi-hA-oli" firstAttribute="top" secondItem="bH6-o4-G6u" secondAttribute="bottom" constant="8" symbolic="YES" id="bET-9S-is0"/>
+                <constraint firstItem="aJi-hA-oli" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="fQA-3J-72a"/>
+            </constraints>
+            <point key="canvasLocation" x="-201.44927536231884" y="97.767857142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

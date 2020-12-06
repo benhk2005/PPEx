@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CurrencyEntryView" customModule="PPEx" customModuleProvider="target">
+            <connections>
+                <outlet property="numberTextField" destination="k0Y-uA-9al" id="FNg-1S-8Xt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1nz-6G-mQo" userLabel="Shadow Container">
+                    <rect key="frame" x="16" y="0.0" width="382" height="64"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k0Y-uA-9al" userLabel="Number Text Field">
+                            <rect key="frame" x="16" y="0.0" width="350" height="64"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            <connections>
+                                <action selector="editingChanged:" destination="-1" eventType="editingChanged" id="pwQ-zC-U1X"/>
+                            </connections>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="k0Y-uA-9al" secondAttribute="trailing" constant="16" id="85V-8S-MsD"/>
+                        <constraint firstItem="k0Y-uA-9al" firstAttribute="leading" secondItem="1nz-6G-mQo" secondAttribute="leading" constant="16" id="Dul-oO-8j6"/>
+                        <constraint firstAttribute="height" constant="64" id="HHf-qw-soA"/>
+                        <constraint firstItem="k0Y-uA-9al" firstAttribute="centerY" secondItem="1nz-6G-mQo" secondAttribute="centerY" id="NbY-F8-oXJ"/>
+                        <constraint firstItem="k0Y-uA-9al" firstAttribute="height" secondItem="1nz-6G-mQo" secondAttribute="height" id="afy-tI-4mb"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" name="ShadowColor"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                            <real key="value" value="0.40000000000000002"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" name="BorderColor"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="1nz-6G-mQo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="5K7-JK-jwH"/>
+                <constraint firstItem="1nz-6G-mQo" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="GWl-9O-rbh"/>
+                <constraint firstItem="1nz-6G-mQo" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" constant="-32" id="k0Y-nu-noY"/>
+                <constraint firstAttribute="bottomMargin" secondItem="1nz-6G-mQo" secondAttribute="bottom" id="pFN-SM-GdC"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="22.5" y="-393.75"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="BorderColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.10000000149011612" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ShadowColor">
+            <color red="0.56470588235294117" green="0.64313725490196083" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
