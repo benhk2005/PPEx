@@ -10,6 +10,13 @@
 
 XCode Version 12.2 (12B45b)
 
+### Install Dependency
+
+PPEx use Alamofire, ObjectMapper and JGProgressHUD
+This project use Cocoapods to manage the dependency
+Please execuet the follow command to install the dependency before run.
+`pod install`
+
 ### App architecture / Implementation approach
 
 - VIPER architecture applied to this application in order to provide high degree of unit test coverage
